@@ -1,0 +1,102 @@
+<nav class="navbar navbar-expand-md">
+  <a class="navbar-brand" routerLink="home">LearnLabs</a>
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="searchInput ">
+    <input type="text" class="form-control" placeholder="Search for your courses here" (keyup)="sendData($event)">
+    <div *ngFor="let name of courseNames">
+      <ul class="resultBox" style="color: black;"><li>{{ name.courseName }}<li></ul>
+    </div>
+    <ng-container *ngIf="courseNames">
+      <section *ngIf="courseNames.length < 1">Sorry, nothing here</section>
+      <section>
+        <hr *ngIf="courseNames.length > 0">
+      </section>
+    </ng-container>
+  </div>
+
+  <ul class="navbar-nav">
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown"
+        aria-expanded="false">Categories</a>
+      <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+        <li class="dropdown-submenu" *ngFor="let category of categories">
+          <a class="dropdown-item ">{{category.name}}</a>
+        </li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link position-relative" routerLink="cart">Cart
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+          *ngFor="let carts of cart">{{cart.length}}</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link position-relative" routerLink="playlist">Subscribed
+        <!-- <span class="position-absolute top-0 start-110 translate-middle badge rounded-pill bg-danger"
+          *ngFor="let carts of watchlist">{{watchlist.length}}</span> -->
+      </a>
+      <!-- <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"  *ngFor="let video of videoDetails">{{videoDetails.length}}</span> -->
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="account" routerLinkActive="">Account</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" (click)="logout()">logout</a>
+    </li>
+  </ul>
+</nav>
+
+
+
+<div class="sidebar-wrapper">
+  <aside class="sidebar-container" [ngClass]="{ 'toggle-function': !sidebarOpen }">
+
+    <!-- TOGGLE -->
+    <div class="toggle" (click)="sidebarOpen = !sidebarOpen">
+      <span class="lines"></span>
+      <span class="lines"></span>
+      <span class="lines"></span>
+    </div>
+
+    <div class="profile-and-links">
+
+      <!-- profile -->
+      <div class="profile-card">
+        <span class="title">
+          <span>Learn</span>Labs</span>
+        <span class="subtitle">Learn it everyday</span>
+      </div>
+
+      <!-- Menu  -->
+      <ul class="links-list">
+        <li class="links">
+          <a routerLink="home">home</a>
+        </li>
+        <li class="links">
+          <a routerLink="cart position-relative">cart
+
+          </a>
+        </li>
+        <li class="links">
+          <a routerLink="playlist">Subscribed</a>
+        </li>
+      </ul>
+    </div>
+    <div class="social-and-logout">
+
+      <!-- Signout -->
+      <div class="signout">
+        <a (click)="logout()">Sign Out</a>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<div class="main-content">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,43 @@
+<div class="container mt-3">
+  <h2>Register</h2>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" formControlName="username">
+      <div *ngIf="registerForm.controls['username'].invalid && (registerForm.controls['username'].dirty || registerForm.controls['username'].touched)">
+        <small class="form-text text-danger" *ngIf="registerForm.controls['username'].errors?.required">
+          Username is required.
+        </small>
+        <small class="form-text text-danger" *ngIf="registerForm.controls['username'].errors?.minlength">
+          Username must be at least 6 characters long.
+        </small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control" formControlName="email">
+      <div *ngIf="registerForm.controls['email'].invalid && (registerForm.controls['email'].dirty || registerForm.controls['email'].touched)">
+        <small class="form-text text-danger" *ngIf="registerForm.controls['email'].errors?.required">
+          Email is required.
+        </small>
+        <small class="form-text text-danger" *ngIf="registerForm.controls['email'].errors?.email">
+          Invalid email address.
+        </small>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" formControlName="password">
+      <div *ngIf="registerForm.controls['password'].invalid && (registerForm.controls['password'].dirty || registerForm.controls['password'].touched)">
+        <small class="form-text text-danger" *ngIf="registerForm.controls['password'].errors?.required">
+          Password is required.
+        </small>
+        <small class="form-text text-danger" *ngIf="registerForm.controls['password'].errors?.minlength">
+          Password must be at least 6 characters long.
+        </small>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="registerForm.invalid">Register</button>
+  </form>
+</div>
+-[]

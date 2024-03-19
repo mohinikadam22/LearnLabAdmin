@@ -1,0 +1,29 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
+    <div class="container-fluid">
+        <div class="profile-card">
+            <span class="title">
+              LearnLabs Admin</span>
+          </div>
+    
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a routerLink="dashboard" routerLinkActive="active" >Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a routerLink="coursetype" [routerLinkActive]="['active']">Categories</a>
+            
+          </li>
+          <li class="nav-item">
+            <a  routerLink="courses" routerLinkActive="active">Courses</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav><button type="button" class="burger" (click)="isSidebarOpen=!isSidebarOpen"></button>
+<section class="main-content">
+  <router-outlet></router-outlet>
+</section>

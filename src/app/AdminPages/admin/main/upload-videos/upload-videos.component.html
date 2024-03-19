@@ -1,0 +1,64 @@
+<p>{{courseId}}</p>
+<div class="row">
+    <div class="col-md-6">
+<div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Upload Video</h5>
+      <form [formGroup]="videoForm" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="video">Video</label>
+            <div class="input-group">
+              <div class="custom-file">
+                <input type="file" id="video" (change)="onVideoChange($event)" class="custom-file-input">
+                <label class="custom-file-label" for="video">Choose file</label>
+              </div>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="thumbnail">Thumbnail</label>
+            <div class="input-group">
+              <div class="custom-file">
+                <input type="file" id="thumbnailFile" (change)="onThumbnailChange($event)" class="custom-file-input">
+                <label class="custom-file-label" for="thumbnail">Choose file</label>
+              </div>
+            </div>
+          </div>
+          
+          
+        <div class="form-group">
+          <label for="filename">Filename</label>
+          <input type="text" id="filename" formControlName="filename" class="form-control">
+        </div>
+
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input type="text" id="title" formControlName="title" class="form-control">
+        </div>
+  
+        <button type="submit" [disabled]="videoForm.invalid" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Uploaded Videos</h5>
+            <ul class="list-group">
+              <li class="list-group-item" *ngFor="let video of uploadedVideos">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div class="d-flex align-items-center">
+                    <img src="{{ video.thumbnailUrl }}" alt="Video Thumbnail" class="thumbnail-image">
+                    <div class="ml-3">{{ video.title }}</div>
+                  </div>
+                  <div>
+                    <button class="btn btn-danger btn-sm" (click)="deleteVideo(video._id)">Delete</button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      

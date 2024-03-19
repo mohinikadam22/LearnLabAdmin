@@ -1,0 +1,17 @@
+<div class="playlist">
+    <h3 class="playlist-title">Playlist</h3>
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let item of playlist" [ngClass]="{'active': item.active}" (click)="selectVideo(item)">
+        <div class="playlist-item">
+          <img class="playlist-thumbnail" [src]="item.thumbnailUrl" alt="Playlist Thumbnail">
+          <div class="playlist-details">
+            <p class="playlist-title">{{ item.title }}</p>
+            <p class="playlist-description">{{ item.description }}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+  

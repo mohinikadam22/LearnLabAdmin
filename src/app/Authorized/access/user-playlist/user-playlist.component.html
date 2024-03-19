@@ -1,0 +1,32 @@
+<section class="hero">
+	<div class="container">
+		<h1>Subscribed Courses</h1>
+		<p>Continue Learning, Resume from where you left.</p>
+
+	</div>
+</section>
+
+<div class="container">
+	<section class="fancy">
+		<div class="row">
+			<div class="col-md-5" *ngFor="let course of subscribedCourses">
+			<div class="course">
+				<div class="course-preview">
+					<img [src]="course.thumbnailUrl" alt="Course Background Image">
+				</div>
+				<div class="course-info">
+					<div class="progress-container">
+						<div class="progress"></div>
+						<span class="progress-text">
+							6/9 Challenges
+						</span>
+					</div>
+					<h6>Chapter 4</h6>
+					<h2>{{course.courseName}}</h2>
+					<button class="btn" routerLink="/access/videoplayer/{{course._id}}">Continue</button>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+</div>

@@ -1,0 +1,219 @@
+.hero {
+    background-color: #6AC48A;
+    color: white;
+    text-align: center;
+    padding: 5rem 0;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 700px) {
+      video{
+        width:80%
+      }
+  }
+
+  .fancy{
+    padding-top: 10px;
+}
+.fancy .card {
+    width: 100%;
+    max-width: 300px; /* Set a maximum width for the card */
+    margin: 0 auto; /* Center the card horizontally */
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+  }
+  
+  .img {
+    background-color: white;
+    height: 300px;
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+  }
+  
+  .img img {
+    width: 100%; /* Make the image responsive */
+    max-width: 100%; /* Ensure the image doesn't exceed its container */
+    border-radius: 20px;
+  }
+  
+  .info {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: auto; /* Allow the height to adjust based on content */
+    position: relative;
+  }
+  
+  .info h2,
+  .info p {
+    padding-left: 20px;
+  }
+  
+  .info p i {
+    margin: 5px;
+  }
+  
+  .play {
+    position: absolute;
+    content: '';
+    height: 40px;
+    width: 40px;
+    background-color: rgb(125, 125, 125);
+    border-radius: 50%;
+    right: 15px;
+    top: -40px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .3s ease;
+  }
+  
+  @media (max-width: 768px) {
+    /* Adjustments for small screens */
+    .container {
+      width: 100%; /* Make the container full width */
+      padding: 0 10px; /* Add some horizontal padding */
+    }
+  
+    .row-cols-md-3 .col {
+      flex-basis: 50%; /* Show two columns per row on small screens */
+    }
+  
+    .img {
+      height: 200px; /* Reduce the height of the image on small screens */
+    }
+  
+    .info h2,
+    .info p {
+      padding-left: 10px; /* Reduce the left padding for text on small screens */
+    }
+  }
+  
+  @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+
+.fancy{
+
+	font-family: 'Muli', sans-serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	/* min-height: 100vh; */
+	margin: 0;
+}
+
+
+
+.course {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	max-width: 100%;
+	margin: 20px;
+	overflow: hidden;
+	width: 700px;
+}
+
+.course h6 {
+	opacity: 0.6;
+	margin: 0;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.course h2 {
+	letter-spacing: 1px;
+	margin: 10px 0;
+}
+
+.course-preview {
+	background-color: #2A265F;
+	color: #fff;
+	padding: 30px;
+	max-width: 250px;
+}
+
+.course-preview a {
+	color: #fff;
+	display: inline-block;
+	font-size: 12px;
+	opacity: 0.6;
+	margin-top: 30px;
+	text-decoration: none;
+}
+
+.course-info {
+	padding: 30px;
+	position: relative;
+	width: 100%;
+}
+
+.progress-container {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	text-align: right;
+	width: 150px;
+}
+
+.progress {
+	background-color: #ddd;
+	border-radius: 3px;
+	height: 5px;
+	width: 100%;
+}
+
+.progress::after {
+	border-radius: 3px;
+	background-color: #2A265F;
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 5px;
+	width: 66%;
+}
+
+.progress-text {
+	font-size: 10px;
+	opacity: 0.6;
+	letter-spacing: 1px;
+}
+
+.btn {
+	background-color: #2A265F;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	letter-spacing: 1px;
+}

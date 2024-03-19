@@ -1,0 +1,75 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Upload Course</h5>
+    <form [formGroup]="courseForm" (ngSubmit)="onSubmit()" class="needs-validation">
+      <div class="form-group">
+        <label for="thumbnail">Thumbnail</label>
+        <input type="file" id="thumbnail" (change)="onThumbnailChange($event)" class="form-control-file">
+        <div *ngIf="courseForm.get('thumbnail').invalid && courseForm.get('thumbnail').touched" class="invalid-feedback">
+          <div *ngIf="courseForm.get('thumbnail').errors.required" class="text-danger">Thumbnail is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="filename">Filename</label>
+        <input type="text" id="filename" formControlName="filename" class="form-control">
+        <div *ngIf="courseForm.get('filename').invalid && courseForm.get('filename').touched" class="invalid-feedback">
+          <div *ngIf="courseForm.get('filename').errors.required" class="text-danger">Filename is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="courseName">Course Name</label>
+        <input type="text" id="courseName" formControlName="courseName" class="form-control">
+        <div *ngIf="courseForm.get('courseName').invalid && courseForm.get('courseName').touched" class="invalid-feedback">
+          <div *ngIf="courseForm.get('courseName').errors.required" class="text-danger">Course Name is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="courseDesc">Course Description</label>
+        <input type="text" id="courseDesc" formControlName="courseDesc" class="form-control">
+        <div *ngIf="courseForm.get('courseDesc').invalid && courseForm.get('courseDesc').touched" class="invalid-feedback">
+          <div *ngIf="courseForm.get('courseDesc').errors.required" class="text-danger">Course Description is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="category">Choose a Category:</label>
+        <select id="category" formControlName="courseCategory" class="form-control">
+          <option [value]="null">Select a category</option>
+          <option *ngFor="let category of categories" [value]="category.name">{{ category.name }}</option>
+        </select>
+        <div *ngIf="courseForm.get('courseCategory').invalid && courseForm.get('courseCategory').touched" class="invalid-feedback">
+          <div *ngIf="courseForm.get('courseCategory').errors.required" class="text-danger">Course category is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="courseLanguage">Course Language</label>
+        <input type="text" id="courseLanguage" formControlName="courseLanguage" class="form-control">
+        <div *ngIf="courseForm.get('courseLanguage').invalid && courseForm.get('courseLanguage').touched" class="invalid-feedback">
+          <div *ngIf="courseForm.get('courseLanguage').errors.required" class="text-danger">Course Language is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="author">Course Author</label>
+        <input type="text" id="author" formControlName="author" class="form-control">
+        <div *ngIf="courseForm.get('author').invalid && courseForm.get('author').touched" class="invalid-feedback">
+          <div *ngIf="courseForm.get('author').errors.required" class="text-danger">Course Author is required.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="amount">Course Amount</label>
+        <input type="text" id="amount" formControlName="amount" class="form-control">
+        <div *ngIf="courseForm.get('amount').invalid && courseForm.get('amount').touched" class="invalid-feedback">
+          <div *ngIf="courseForm.get('amount').errors.required" class="text-danger">Course Amount is required.</div>
+        </div>
+      </div>
+
+      <button type="submit" [disabled]="courseForm.invalid" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>

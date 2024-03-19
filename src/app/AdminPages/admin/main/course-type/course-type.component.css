@@ -1,0 +1,56 @@
+/* Add Video Type section */
+.card {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-header {
+    background-color: #3366FF;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .form-group label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .btn-primary {
+    background-color: #3366FF;
+    border-color: #3366FF;
+  }
+  
+  .btn-primary:hover {
+    background-color: #2358cc;
+    border-color: #2358cc;
+  }
+  
+  .add{
+    padding-top:20px;
+  }
+  
+  /* Table */
+  .table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+  }
+  
+  .table thead th {
+    background-color: #3366FF;
+    color: #fff;
+    border: none;
+  }
+  
+  .table tbody td {
+    background-color: #f9f9f9;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  

@@ -1,0 +1,24 @@
+<!-- <div class="embed-responsive embed-responsive-16by9">
+  <video src ="http://localhost:3000/video/{{courseId}}" controls class="d-block mx-auto mb-3"></video>
+    Your browser does not support the video tag.
+</div> -->
+<div class="row">
+  <div class="col-lg-8">
+    <div class="embed-responsive embed-responsive-16by9">
+      <video width="1000" height="1000" [src]="getVideoUrl() || 'http://localhost:3000/video/' + courseId" controls class="d-block mx-auto mb-3"></video>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <app-playlist [playlist]="playlist" (videoSelected)="playVideo($event)"></app-playlist>
+  </div>
+</div>
+
+<div>
+  <div class="row">
+    <div class="col-lg-4" *ngIf="courseData">
+      <p>{{courseData.courseName}}</p>
+      <p><strong>Course Author:</strong> {{courseData.author}}</p>
+      <p><strong>Course Details:</strong> {{courseData.details}}</p>
+    </div>
+  </div>
+</div>

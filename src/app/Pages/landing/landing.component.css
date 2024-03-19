@@ -1,0 +1,138 @@
+.navbar {
+    background-color: #00a6bf;
+    min-height: 60px;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+}
+
+.navbar-brand {
+    font-size: 20px;
+}
+
+.navbar-brand:hover {
+    border-radius: 20px;
+    color: gold;
+    padding: 5px;
+    font-size: 30px;
+}
+
+.navbar-collapse {
+    color: gold;
+}
+
+.navbar-nav .nav-link:hover {
+    border-radius: 20px;
+    background-color:lightgreen;
+    color: black
+}
+
+.navbar-toggler {
+    border-color: #fff;
+}
+
+.navbar-toggler:hover {
+    border-color: black;
+}
+
+.hero {
+    background-color:
+        #66CC99;
+    color: #fff;
+    padding: 100px;
+    text-align: center;
+}
+
+.course-section {
+    padding: 20px;
+}
+
+.course {
+    background-color: #f7f7f7;
+    padding: 50px 0;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.col-lg-12 {
+    padding: 10px;
+}
+
+.btn-primary {
+    background-color: #00a6bf;
+    border-color: #00a6bf;
+}
+
+.btn-primary:hover {
+    background-color: #00849d;
+    border-color: #00849d;
+}
+
+.btn-success {
+    background-color: #3dbb66;
+    border-color: #3dbb66;
+}
+
+.btn-success:hover {
+    background-color: #329f4e;
+    border-color: #329f4e;
+}
+
+@media (max-width: 767px) {
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-left: 30px;
+        color:black;
+    }
+
+    .nav-link:hover{
+        width: 50%;
+        transition-delay: 5ms;
+        background-color: #3dbb66;
+    }
+
+    .navbar-toggler {
+        border-color: #00a6bf;
+    }
+
+    .btn-primary {
+        background-color: #00a6bf;
+        border-color: #fff;
+        color: #fff;
+    }
+
+    .btn-success {
+        background-color: #3dbb66;
+        border-color: #fff;
+        color: #fff;
+    }
+}
+
+
+/* Responsive Styling */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .course-section .card {
+        margin-bottom: 30px;
+    }
+
+    .course-section .col-lg-6 {
+        margin-bottom: 30px;
+    }
+}

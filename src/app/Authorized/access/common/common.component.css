@@ -1,0 +1,250 @@
+ nav {
+    background-color: rgb(236, 236, 236);
+    padding: 1rem;
+  }
+  .badge{
+    color:white;
+  }
+  nav a {
+    color: black;
+    margin-right: 1rem;
+    font-size: 1.2rem; 
+  } */
+  
+  .input-group{
+    width: 30%;
+}
+.form-control{
+    border-radius:20px ;
+    
+}
+.search_button{
+   background-color: transparent;
+    color: black;
+    border-radius: 0px;
+}
+
+.search_button:hover{
+    background-color:rgb(38, 174, 38) ;
+}
+
+
+
+  
+  /* Responsive */
+  @media (max-width: 700px) {
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -100%;
+        width: 100%;
+        overflow-y: auto;
+        background-color: #fff;
+        padding-top: 1rem;
+        transition: all 0.5s ease-in-out;
+      }
+      .navbar-collapse.show {
+        left: 0;
+        z-index: 999;
+      }
+    nav a {
+      margin-right: 0.5rem;
+      font-size: 1rem;
+    }
+    
+    .hero h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    
+    .hero p {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+    .navbar-close-btn {
+        border: none;
+        background: transparent;
+        color: black;
+        font-size: 1.5rem;
+        cursor: pointer;
+    
+        right: 1rem;
+        top: 1rem;
+        z-index: 999;
+      }
+      
+      .navbar-closed {
+        display: none;
+      }
+  }
+
+  .sidebar-container{
+    width:220px;
+    height: calc(100vh - 5vh);
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 2px 0 10px rgb(129, 129, 129);
+    transition: 0.5s;
+    z-index: 10;
+    position: absolute;
+    height: 100vh;
+    
+  }
+
+  /* toggle */
+  .toggle{
+    position:absolute;
+    top:10px;
+    right:-37px;
+    z-index:-1;
+    background-color: #191e24;
+    height: 35px;
+    width:40px;
+    border-radius:0 10px 10px 0;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    gap:5px;
+    padding: 5px ;
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .lines{
+    width:60%;
+    height: 2px;
+    display: block;
+    background-color:grey;
+    padding-right: 10px;
+  }
+
+  .toggle-function{
+    transform:translate(-220px,0);
+    transition: 0.5s;
+  }
+
+  /* profile card */
+  .profile-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    margin-bottom:20px;
+    background-color: #fff;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .profile-card .title{
+    margin-top: 5px;
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #191e24;
+  }
+
+  .profile-card .subtitle{
+    font-weight:300;
+    font-size:small;
+    letter-spacing: 1px;
+  }
+
+/* list container */
+.links-list li a,
+.signout ,
+.social-media-icons{
+  color: lightgray;
+  margin-left: 25px;
+  display: block;
+  font-weight: 600;
+  padding: 5px 0;
+  font-size:medium;
+  transition: ease-in-out 0.2s;
+  text-decoration: none;
+    list-style-type: none;
+}
+
+.links-list i,
+.signout i{
+  color: lightgray;
+  margin-right: 10px;
+}
+
+.links-list li :hover,
+.signout a:hover {
+  color: white;
+  font-weight: 600;
+  transition: ease-in-out 0.2s;
+}
+
+.links-list li {
+  width :100%;
+  margin-top: 10px;
+}
+.sidebar-wrapper {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .sidebar-wrapper {
+    display: block;
+  }
+  .navbar{
+    display: none;
+  }
+}
+
+
+.search-container {
+  position: relative;
+}
+
+#suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: none;
+}
+
+#suggestions-list li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+#suggestions-list li:hover {
+  background-color: #f2f2f2;
+}
+
+
+
+.searchInput input{
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+.searchInput .resultBox{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
